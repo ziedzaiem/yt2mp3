@@ -1,0 +1,27 @@
+{
+  "name": "yt2mp3",
+  "version": "0.0.1",
+  "description": "Youtube to MP3 downloader and converter, uses youtube_dl.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "git": "git add . && git commit && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ziedzaiem/yt2mp3"
+  },
+  "author": "Zied ZAIEM <zaiem.zied@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ziedzaiem/yt2mp3/issues"
+  },
+  "homepage": "https://github.com/ziedzaiem/yt2mp3#README",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bull": "^3.13.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

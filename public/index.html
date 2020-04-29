@@ -1,0 +1,304 @@
+
+<!--
+=========================================================
+* Argon Design System - v1.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2020 Creative Tim (http://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>yt2mp3</title>
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="https://demos.creative-tim.com/argon-design-system/assets/css/font-awesome.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0" rel="stylesheet" />
+
+
+  <style>
+    /* Custom Style */
+    body {
+      background: #f4f5f7;
+    }
+    a.navbar-brand {
+        text-transform:none;
+    }
+    @media (max-width: 991.98px) {
+        .section-profile-cover {
+            height: 300px !important;
+        }
+    }
+    .section-profile-cover {
+        height: 520px;
+        background-image: linear-gradient(to right bottom, #5e72e4, #a45fd2, #d247b2, #ec3489, #f5365c);
+    }
+    .pb-lg, .py-lg {
+        padding-bottom: 2rem!important;
+        padding-top: 8rem!important;
+    }
+    .profile-page .card-profile .card-profile-image img {
+        max-width: 240px;
+    }
+  </style>
+
+</head>
+
+<body class="profile-page">
+  <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+    <div class="container">
+      <a class="navbar-brand mr-lg-5" href="/">
+        yt2mp3
+      </a>
+      <!--
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      -->
+      <div class="navbar-collapse collapse" id="navbar_global">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="./">
+                yt2mp3
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+
+        </ul>
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+            <a href="https://github.com/ziedzaiem/yt2mp3" target="_blank" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fa fa-code-fork mr-2"></i>
+              </span>
+              <span class="nav-link-inner--text">Github</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <div class="wrapper">
+    <section class="section-profile-cover section-shaped my-0">
+        <div class="container shape-container d-flex align-items-top py-lg">
+          <div class="col px-0">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-lg-6 text-center">
+                <div class="form-group" id="in_url_parent">
+                    <input type="text" placeholder="Youtube Video URL" class="form-control" id="in_url">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-secondary" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+    
+    <section class="section bg-secondary" id="out_card" style="display:none">
+      <div class="container">
+        <div class="card card-profile shadow mt--300">
+          <div class="px-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 order-lg-2 d-none d-lg-block">
+                <div class="card-profile-image">
+                  <a href="javascript:;">
+                    <img id="out_thumb_1" src="" class="img-fluid rounded shadow-lg">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-12 col-12 order-1 d-lg-none">
+                <div class="d-flex justify-content-center">
+                <img id="out_thumb_2" src="" class="img-fluid rounded shadow-lg" style="max-width: 240px;">
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12 order-lg-1">
+                <div class="card-profile-stats d-flex justify-content-center">
+                    <div>
+                        <span class="heading" id="out_viewCount"></span>
+                        <span class="description"><i class="fas fa-eye"></i>&#160;Views</span>
+                      </div>
+                      <div>
+                        <span class="heading" id="out_publishedAt"></span>
+                        <span class="description"><i class="far fa-calendar"></i>&#160;Published</span>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12 order-lg-3">
+                <div class="card-profile-stats d-flex justify-content-center">
+                    <div>
+                        <span class="heading" id="out_likeCount"></span>
+                        <span class="description"><i class="fas fa-thumbs-up"></i>&#160;Likes</span>
+                        </div>
+                        <div>
+                        <span class="heading" id="out_dislikeCount"></span>
+                        <span class="description"><i class="fas fa-thumbs-down"></i>&#160;Dislikes</span>
+                        </div>
+                    </div>
+              </div>
+            </div>
+            <div class="text-center mt-5">
+              <h3 id="out_title"></h3>
+              <div class="h6 font-weight-300" id="out_channelTitle"></div>
+            </div>
+
+            
+            <div class="mt-5 py-5 border-top text-left">
+            
+                <div class="row">
+                  <div class="col-md-8">
+                    <small class="d-block text-uppercase font-weight-bold mb-3">Title</small>
+                    <div class="form-group focused">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"></span>
+                        </div>
+                        <input class="form-control" placeholder="Title" type="text" id="in_title">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <small class="d-block text-uppercase font-weight-bold mb-3">Artist</small>
+                    <div class="form-group focused">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"></span>
+                        </div>
+                        <input class="form-control" placeholder="Artist" type="text" id="in_artist">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <small class="d-block text-uppercase font-weight-bold mb-3">Album</small>
+                    <div class="form-group focused">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"></span>
+                        </div>
+                        <input class="form-control" placeholder="Album" type="text" id="in_album">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <small class="d-block text-uppercase font-weight-bold mb-3">Genre</small>
+                    <div class="form-group focused">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"></span>
+                        </div>
+                        <!--<input class="form-control" placeholder="Genre" type="text" id="in_genre">-->
+                        <select  class="form-control" id="in_genre">
+                          <option value="Blues">Blues</option>
+                          <option value="Reggae">Reggae</option>
+                          <option value="Country">Country</option>
+                          <option value="Electronic">Electronic</option>
+                          <option value="Hip hop">Hip hop</option>
+                          <option value="House">House</option>
+                          <option value="Flamenco">Flamenco</option>
+                          <option value="Folk">Folk</option>
+                          <option value="Jazz">Jazz</option>
+                          <option value="Latin">Latin</option>
+                          <option value="Pop">Pop</option>
+                          <option value="R&B">R&B</option>
+                          <option value="Rock">Rock</option>
+                          <option value="Heavy metal">Heavy metal</option>
+                          <option value="Rap">Rap</option>
+                        </select>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <small class="d-block text-uppercase font-weight-bold mb-3">Year</small>
+                    <div class="form-group focused">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"></span>
+                        </div>
+                        <input class="form-control" placeholder="Year" type="text" id="in_year">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-md-12">
+                      <br/>
+                      <button class="btn btn-lg btn-danger" type="button" id="in_download"><i class="fas fa-download"></i> Download</button>
+                      <button class="btn btn-lg btn-primary" type="button" id="in_minio"><i class="fas fa-music"></i> Add to Minio</button>
+                  </div>
+                </div>
+                
+            </div>
+            <div class="mt-5 py-5 border-top text-center">
+              <div class="row justify-content-center">
+                <div class="col-lg-9">
+                  <p id="out_description" class="text-left"></p>
+                  <a id="out_more" href="" target="_blank">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row align-items-center justify-content-md-between">
+          <div class="col-md-6">
+            <div class="copyright">
+              &copy; 2020 <a href="https://www.ziedzaiem.com" target="_blank">Zied ZAIEM</a> | <a href="https://twitter.com/ziedzaiem" target="_blank">@ziedzaiem</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ul class="nav nav-footer justify-content-end">
+              <li class="nav-item">
+                <a href="https://www.creative-tim.com/product/argon-design-system" class="nav-link" target="_blank">Template : Argon Design System</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link" target="_blank">v0.0.1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="https://demos.creative-tim.com/argon-design-system/assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/argon-design-system/assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/argon-design-system/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
