@@ -2,6 +2,9 @@
 
 Youtube to MP3 downloader and converter, uses youtube_dl. Stores mp3 files in Minio or any [mc](https://github.com/minio/mc) compatible Object Storage (Amazon S3 , Google Cloud Storage, etc.).
 
+[![Known Vulnerabilities](https://snyk.io/test/github/ziedzaiem/yt2mp3/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ziedzaiem/yt2mp3?targetFile=package.json)
+
+
 <img src="https://raw.githubusercontent.com/ziedzaiem/yt2mp3/master/screenshot.png" width="200" alt="screenshot.png" />
 
 ## Instructions
