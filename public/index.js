@@ -61,7 +61,7 @@ $( "#in_url" ).keypress(function() {
 });
 
 $( "#in_url" ).on('paste', function(e){
-    var content = e.originalEvent.clipboardData.getData('text/plain');
+    //var content = e.originalEvent.clipboardData.getData('text/plain');
     clean();
 });
     
@@ -95,7 +95,7 @@ $( "#in_url" ).change(function() {
         $("#out_channelTitle").html(yt.snippet.channelTitle);
         $("#out_description").html(yt.snippet.description.replace("\n","<br/>"));
         
-        publishedAt = Date.parse(yt.snippet.publishedAt)
+        var publishedAt = Date.parsepublishedAt = Date.parse(yt.snippet.publishedAt)
         $("#out_publishedAt").html((new Date(publishedAt)).toLocaleDateString());
         
         // Show Big Card

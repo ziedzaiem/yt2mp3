@@ -128,7 +128,7 @@ app.post('/minio', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
 
     // Add Job to Queue
-    job = minioQueue.add(req.body);
+    minioQueue.add(req.body);
 
     res.send({"OK":"OK"});
 
