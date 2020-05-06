@@ -3,12 +3,12 @@ FROM ubuntu:18.04
 LABEL maintainer="Zied ZAIEM <zaiem.zied@gmail.com>"
 
 RUN apt-get update -qq
-RUN apt-get install -y -qq wget curl python python-pip gcc g++ make locales ffmpeg lame
+RUN apt-get install -y -qq --no-install-recommends wget curl python python-pip gcc g++ make locales ffmpeg lame
 RUN pip install --upgrade pip
 RUN pip install --upgrade youtube_dl
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get install -y -qq nodejs
+RUN apt-get install -y -qq --no-install-recommends nodejs
 
 ADD . /yt2mp3
 WORKDIR /yt2mp3
