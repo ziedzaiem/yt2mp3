@@ -67,6 +67,14 @@ if [ ! -f "$MP3_FILE" ]; then
     MP3_FILE=$(youtube-dl --no-color --get-filename -o "$ARTIST - $TITLE.m4a" $URL)
 fi
 
+if [ ! -f "$JPG_FILE"]; then
+    WEBP_FILE=$(youtube-dl --no-color --get-filename -o "$ARTIST - $TITLE.webp" $URL)
+    if [ -f "$WEBP_FILE"]; then
+        dwebp "$WEBP_FILE" -o "$JPG_FILE"
+        rm -f "$WEBP_FILE"
+    fi
+fi
+
 # Add Tags, produces a new file : "$MP3_FILE.mp3"
 lame -V0 --quiet --tt "$TITLE" --ta "$ARTIST" --tl "$ALBUM" --tg "$GENRE" --ty "$YEAR" --ti "$JPG_FILE" "$MP3_FILE"
 
