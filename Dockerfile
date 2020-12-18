@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 LABEL maintainer="Zied ZAIEM <zaiem.zied@gmail.com>"
 
 RUN apt-get update -qq
-RUN apt-get install -y -qq --no-install-recommends wget curl python python-pip gcc g++ make locales ffmpeg lame webp
+RUN apt-get install -y -qq --no-install-recommends wget curl python python-pip gcc g++ make locales ffmpeg lame webp file
 RUN pip install --upgrade pip
 RUN pip install --upgrade youtube_dl
 

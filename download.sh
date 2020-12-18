@@ -75,6 +75,13 @@ if [ ! -f "$JPG_FILE" ]; then
         dwebp "$WEBP_FILE" -o "$JPG_FILE"
         rm -f "$WEBP_FILE"
     fi
+else
+    IS_WEBP=$(file "$JPG_FILE" | grep -c "Web/P")
+    if [ "$IS_WEBP" -eq 1 ]; then
+        mv "$JPG_FILE" "$JPG_FILE"2
+        dwebp "$JPG_FILE"2 -o "$JPG_FILE"
+        rm -f "$JPG_FILE"2
+    fi
 fi
 
 # Add Tags, produces a new file : "$MP3_FILE.mp3"
